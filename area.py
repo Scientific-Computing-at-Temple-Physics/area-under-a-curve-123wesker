@@ -2,11 +2,13 @@ import numpy as np
 import math as ma
 import matplotlib.pyplot as plt
 #straight line y=2x-1
+
 #x interval 10 and step =1
 x_list=[0.5,1.5,2.5,3.5,4.5,5.5,6.5,7.5,8.5,9.5]
 x = np.array(x_list)
 y = 2*x-1
 Y = np.sum(y)
+
 #Parabola y=2x^2+3x-2
 #x interval 10 and step 1
 a_list=[0.5,1.5,2.5,3.5,4.5,5.5,6.5,7.5,8.5,9.5]
@@ -31,6 +33,13 @@ q=((796.7-795)/((796.7+795)/2))*100
 j=((M-42.67)/((M+42.67)/2))*100
 
 print ("percent diff:"),k,q,j
+# if we have x step of 5
+o_list=[2.5,7.5]
+o = np.array(o_list)
+O = (2*o+3)*ma.e**(-0.2*o)
+P = np.sum(5*O)
+p = (P-42.67)/((P+42.67)/2)*100
+
 # if we have x step of 2
 i_list=[1,3,5,7,9]
 i = np.array(i_list)
@@ -52,8 +61,8 @@ G = (2*g+3)*ma.e**(-0.2*g)
 h = np.sum(0.25*G)
 H =(h-42.67)/((h+42.67)/2)*100
 
-t=[0.25,0.5,1,2]
-v=[H,r,j,u]
+t=[0.25,0.5,1,2,5]
+v=[H,r,j,u,p]
 plt.scatter(t,v)
 plt.show()
-# So far we have step of 0.25,0.5,1,2 and H,r,j,u
+# So far we have step of 0.25,0.5,1,2,5 and H,r,j,u,p
